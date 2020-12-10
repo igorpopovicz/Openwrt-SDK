@@ -1,9 +1,9 @@
 <h1 align="center">
   <img src="public/Openwrt_logo_square.png" width="200">
         <br>
-    Usando SDK Open-WRT
+    SDK Open-WRT
 </h1>
-<p>Como usar o compilador do Open-WRT corretamente</p>
+<p>how to use the Openwrt SDK compiler correctly</p>
 <br>
 
 ## Prerequisites :  
