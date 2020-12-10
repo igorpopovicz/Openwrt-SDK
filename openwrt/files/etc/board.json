@@ -1,0 +1,73 @@
+{
+	"model": {
+		"id": "hilink,hlk-7628n",
+		"name": "HILINK HLK-7628N"
+	},
+	"led": {
+		"wifi_led": {
+			"name": "wifi",
+			"sysfs": "green:wlan",
+			"type": "netdev",
+			"device": "wlan0",
+			"mode": "link tx rx"
+		}
+	},
+	"switch": {
+		"switch0": {
+			"enable": true,
+			"reset": true,
+			"ports": [
+				{
+					"num": 1,
+					"role": "lan"
+				},
+				{
+					"num": 2,
+					"role": "lan"
+				},
+				{
+					"num": 3,
+					"role": "lan"
+				},
+				{
+					"num": 4,
+					"role": "lan"
+				},
+				{
+					"num": 0,
+					"role": "wan"
+				},
+				{
+					"num": 6,
+					"device": "eth0",
+					"need_tag": false,
+					"want_untag": false
+				}
+			],
+			"roles": [
+				{
+					"role": "lan",
+					"ports": "1 2 3 4 6t",
+					"device": "eth0.1"
+				},
+				{
+					"role": "wan",
+					"ports": "0 6t",
+					"device": "eth0.2"
+				}
+			]
+		}
+	},
+	"network": {
+		"lan": {
+			"ifname": "eth0.1",
+			"protocol": "static",
+			"macaddr": "62:cc:34:96:14:6c"
+		},
+		"wan": {
+			"ifname": "eth0.2",
+			"protocol": "dhcp",
+			"macaddr": "62:cc:34:96:14:6d"
+		}
+	}
+}

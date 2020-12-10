@@ -1,0 +1,46 @@
+#Loopback
+config interface 'loopback'
+        option ifname 'lo'
+        option proto 'static'
+        option ipaddr '127.0.0.1'
+        option netmask '255.0.0.0'
+
+config globals 'globals'
+        option ula_prefix 'fd06:2f5f:10cd::/48'
+
+#Ip das portas ethernet
+config interface 'lan'
+        option ifname 'eth0.1'
+        option proto 'static'
+        option ipaddr '192.168.0.30'
+        option netmask '255.255.255.0'
+        option ip6assign '60'
+        option gateway '192.168.0.1'
+        option dns '8.8.8.8'
+
+#MAC address das portas ethernet
+config device 'lan_eth0_dev'
+        option name 'eth0.1'
+        option macaddr '1a:6d:9b:9a:b9:66'
+
+#Configuracao de VLAN
+config switch
+        option name 'switch0'
+        option reset '1'
+        option enable_vlan '1'
+
+config switch_vlan
+        option device 'switch0'
+        option vlan '1'
+        option ports '0 1 2 3 4 6t'
+      
+config switch_vlan
+        option device 'switch0'
+        option vlan '2'
+        option ports '5 6t'
+
+#Configuracao do Wifi
+config interface 'Wifi'
+        option proto 'static'
+        option ipaddr '192.168.2.1'
+        option netmask '255.255.255.0'
