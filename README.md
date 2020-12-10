@@ -1,7 +1,7 @@
 <h1 align="center">
-  <img src="public/openwrt_574-308.png" width="220">
+  <img src="public/Openwrt_logo_square.png" width="200">
         <br>
-    Usando SKD Open-WRT
+    Usando SDK Open-WRT
 </h1>
 <p>Como usar o compilador do Open-WRT corretamente</p>
 <br>
